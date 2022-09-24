@@ -120,6 +120,7 @@ function App() {
   const clearFields = () => {
     setFirstName("");
     setSecondName("");
+    setShowAnswer(false);
   };
   return (
     <div id="main">
