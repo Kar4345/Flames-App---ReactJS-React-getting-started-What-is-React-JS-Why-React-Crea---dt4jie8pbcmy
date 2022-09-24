@@ -103,7 +103,9 @@ function App() {
     console.log(ans);
     setActualAnswer(ans);
     console.log(answer[actualAnswer])
-    setShowAnswer(true);
+    if(firstName && secondName){
+      setShowAnswer(true);
+    }
 
   }
 
