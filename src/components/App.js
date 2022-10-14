@@ -53,6 +53,7 @@ import "../styles/App.css";
 function App() {
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
+  const [second,setSecond] = useState(false);
   const answer ={
     0:"Siblings",
     1:"Friends",
@@ -121,6 +122,7 @@ function App() {
     setFirstName("");
     setSecondName("");
     setShowAnswer(false);
+    setSecond(true);
   };
   return (
     <div id="main">
@@ -141,7 +143,7 @@ function App() {
       <button data-testid="calculate_relationship" onClick={checkFlame}>
         Calculate Relationship Future
       </button>
-      <h3 data-testid="answer">{showAnswer? answer[actualAnswer] : "Please Enter valid input"}</h3>
+      <h3 data-testid="answer">{showAnswer? answer[actualAnswer] : second? "":"Please Enter valid input"}</h3>
       <button data-testid="clear" onClick={clearFields}>Clear</button>
     </div>
   );
